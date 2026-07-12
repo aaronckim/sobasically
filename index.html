@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>so basically — complicated things, dumbed down</title>
+  <meta name="description" content="Urban Dictionary for complicated things. Complex terms, dumbed down to a sentence. Mastectomy = no more boobs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23FFE81A'/><text x='50' y='72' font-size='64' text-anchor='middle' font-family='Georgia'>=</text></svg>">
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="logo" href="#" data-action="home">
+        <span class="logo-so">so</span> <span class="logo-basically">basically</span><span class="logo-period">.</span>
+      </a>
+      <p class="tagline">complicated things, dumbed down</p>
+    </div>
+  </header>
+
+  <nav class="toolbar">
+    <div class="wrap toolbar-inner">
+      <div class="searchbox">
+        <input id="search" type="search" placeholder="search a big word…" autocomplete="off" aria-label="Search terms">
+        <kbd class="slash-hint">/</kbd>
+      </div>
+      <div class="cats" id="cats" role="tablist" aria-label="Browse by category">
+        <button class="cat is-active" data-cat="all">everything</button>
+        <button class="cat" data-cat="ai">ai &amp; tech</button>
+        <button class="cat" data-cat="medicine">medicine</button>
+        <button class="cat" data-cat="science">science</button>
+        <button class="cat" data-cat="finance">finance</button>
+        <button class="cat" data-cat="culture">internet</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <section id="hero" class="hero" aria-label="Term of the day">
+      <!-- populated by app.js -->
+    </section>
+
+    <div class="feed-head">
+      <h2 id="feed-title" class="feed-title">the feed</h2>
+      <div class="feed-tools">
+        <button id="shuffle" class="btn-marker" title="Reshuffle the feed">shuffle ↻</button>
+        <button id="az" class="btn-ghost" title="Sort alphabetically">a–z</button>
+      </div>
+    </div>
+
+    <section id="feed" class="feed" aria-live="polite"></section>
+
+    <div class="load-wrap">
+      <button id="more" class="btn-more">more, please</button>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p><strong>sobasically.com</strong> — for researchers, patients, students, and anyone who nodded along in a meeting without knowing the word.</p>
+      <p class="footer-fine">definitions are deliberately oversimplified. that's the whole point. don't cite us in your thesis. <span class="footer-count" id="count"></span></p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="data/terms.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

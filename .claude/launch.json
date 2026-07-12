@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sobasically",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8642", "-d", "/Users/aaronkim/Desktop/Claude Projects/sobasically"],
+      "port": 8642
+    }
+  ]
+}
