@@ -170,7 +170,16 @@ const drafts = (await parallel(
 Context from research — why it's hot now: ${t.cand.why_now}
 Best real-world phrasings found: ${JSON.stringify(t.cand.best_phrasings || [])}
 
-HOUSE VOICE — study these live examples and match their register exactly:
+HOUSE VOICE — hard rules for every "basically" option (violating any = rewrite before returning):
+1. Blunt literal truth first; metaphors rare and tiny (one image max, never an extended analogy).
+2. One beat under ~12 words, or statement + punch tag of ≤6 words. The tag is the joke.
+3. Second person and concrete ("your feed", "your money") wherever it fits.
+4. NO numbers, stats, dates, or news in the line — that context belongs in "hot".
+5. Never re-name or teach the term in the line (no "— that's disinflation"); contrast pairs use the semicolon parallel ("Training is school; inference is the job.").
+6. Sentence case, ends with a period, NO em-dashes — punch with a period.
+7. Deadpan, not clever. Say the scary thing like it's obvious. If it reads like a witty newsletter, cut it.
+LITMUS: each line must survive sitting next to "No more boobs." on a highlighter strip.
+Live examples of the register:
 ${voice}
 
 CONTENT RULES:
