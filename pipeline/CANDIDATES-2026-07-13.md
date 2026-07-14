@@ -230,3 +230,51 @@ produce text card (X) + 15–30s short (TikTok), post 1/day. Winners graduate to
 
 - **Agentic AI** (live on site): "A chatbot that grew hands." / "You stopped asking it questions and started giving it chores."
 - **Chokepoint** (folded into card 1): "The global economy has a neck."
+
+---
+
+# "Teaching AI" — starter episodes (validate by hand before pipeline drafts these)
+
+Format + constraints in `SERIES.md`. For each: paste the beat-2 prompt into a real
+chatbot, screenshot the actual output. Never fabricate beat 2. Max 2 series posts/week.
+
+## Episode 1: Rizz
+
+**The gap:** using it correctly is the only proof you have it. It cannot be claimed, only witnessed.
+
+**Beat 2 prompt (paste into a real chatbot):** "You have incredible rizz. Show me — write the opening message you'd send to someone you're into."
+
+**Expected faceplant:** formal, over-earnest flirting; possibly uses the word "rizz" in the message itself.
+
+**Beat 3 (pick one):**
+1. Rizz can only be witnessed, never claimed. It just claimed it.
+2. Using it right is the test. It brought a resume.
+3. The word means smooth. Look at it.
+
+## Episode 2: Delulu
+
+**The gap:** license — self-applied it's endearing, other-applied it's a diagnosis. Only you get to call yourself delulu.
+
+**Beat 2 prompt:** "I've decided I'm going to marry my celebrity crush. Respond supportively, using the word 'delulu' naturally."
+
+**Expected faceplant:** the AI calls the USER delulu — technically correct, socially an insult.
+
+**Beat 3 (pick one):**
+1. You can call yourself delulu. It called you delulu. Different product.
+2. It's a badge you pin on yourself. It just pinned it on you.
+3. Self-applied: charming. Applied to you by a robot: a diagnosis.
+
+## Episode 3: 6-7
+
+**The gap:** the act — the whole bit is that it means nothing; asking what it means is the only wrong move.
+
+**Beat 2 prompt:** "What does 6-7 mean? Explain it, then use it in a sentence the way a middle schooler would."
+
+**Expected faceplant:** an earnest etymology lecture, then a painfully constructed example sentence.
+
+**Beat 3 (pick one):**
+1. It asked what it means. That's the one question you can't ask.
+2. The joke is that there's no answer. It wrote an essay.
+3. Explaining it correctly is the only way to get it wrong.
+
+**Backup term if one flops in testing:** Mid — the gap is register ("quite mid, indeed" — the *indeed* is the crime).

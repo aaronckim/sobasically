@@ -6,6 +6,7 @@ export const meta = {
     { title: 'Mine', detail: 'parallel: raw dumps + fresh web sweeps' },
     { title: 'Rank', detail: 'dedup vs live site, score, pick top candidates' },
     { title: 'Draft', detail: 'card copy + feed hook per term' },
+    { title: 'Series', detail: '"Teaching AI" episodes: semantic vs pragmatic gap' },
   ],
 }
 
@@ -16,6 +17,8 @@ const dumps = input.dumps || []
 const existing = (input.existingTerms || []).map(t => t.toLowerCase())
 const voice = input.voiceSamples || ''
 const pickCount = input.pickCount || 14
+const seriesCount = input.seriesCount === undefined ? 2 : input.seriesCount
+const usedSeriesTerms = (input.usedSeriesTerms || []).map(t => t.toLowerCase())
 if (!weekLabel || !existing.length) log('WARNING: weekLabel or existingTerms missing — dedup/date context degraded')
 
 const CAND_SCHEMA = {
@@ -82,6 +85,28 @@ const DRAFT_SCHEMA = {
     best_found: {
       type: 'object',
       properties: { text: { type: 'string' }, source: { type: 'string' }, url: { type: 'string' } },
+    },
+  },
+}
+
+const EPISODE_SCHEMA = {
+  type: 'object',
+  required: ['episodes'],
+  properties: {
+    episodes: {
+      type: 'array',
+      items: {
+        type: 'object',
+        required: ['term', 'gap', 'beat2_prompt', 'beat2_expected_failure', 'beat3_options'],
+        properties: {
+          term: { type: 'string' },
+          gap: { type: 'string', description: 'one line: the usage rule (license/register/act) the definition does not capture' },
+          beat2_prompt: { type: 'string', description: 'the EXACT prompt Aaron pastes into a real chatbot to produce the faceplant' },
+          beat2_expected_failure: { type: 'string', description: 'one line: how the AI is likely to fumble it' },
+          beat3_options: { type: 'array', items: { type: 'string' }, description: 'exactly 3 deadpan rule-lines in house voice, best first' },
+          safety_note: { type: 'string', description: 'only if the term needs care; omit otherwise' },
+        },
+      },
     },
   },
 }
@@ -196,4 +221,32 @@ Give exactly 3 "basically" options, best first. Verify the formal definition is 
 )).filter(Boolean)
 
 log(`${drafts.length} cards drafted`)
-return { weekLabel, minedCount: mined.length, freshCount: fresh.length, drafts }
+
+// ---- Phase 4: Series ("Teaching AI" episodes) ----
+let episodes = []
+if (seriesCount > 0) {
+  phase('Series')
+  const cultureCands = fresh.filter(c => (c.cat || '').toLowerCase() === 'culture').map(c => c.term)
+  const seriesResult = await agent(
+    `Draft ${seriesCount} episodes of "Teaching AI" — a recurring segment for the sobasically feed.
+
+THE PREMISE: the gap between semantic knowledge (what a word means) and pragmatic knowledge (what saying it DOES). The AI has the dictionary; it lacks the license (who may say it), register (how it's said), or act (what saying it does — e.g. an insult is a weapon, not a description). The comedy is the AI's earnest social incompetence.
+
+EPISODE FORMAT (three beats):
+1. Definition test — the AI defines the term correctly. "Definition: 10/10."
+2. Application test — the AI is asked to USE it and faceplants. "Vibes: 0." (Aaron will paste your beat2_prompt into a real chatbot and screenshot the actual output — so write a prompt genuinely likely to produce a funny-but-real fumble.)
+3. The rule it broke — ONE deadpan line naming the usage law it violated.
+
+PICK TERMS with the biggest semantic-pragmatic gap. Slang/internet-culture terms work best. Candidates from this week's mining: ${JSON.stringify(cultureCands)}. Evergreen slang is also fair game. Do NOT use these already-used terms: ${JSON.stringify(usedSeriesTerms)}.
+
+SAFETY (non-negotiable): the joke lands on the AI, never on the group a term targets. Skip slur-adjacent or group-derogatory terms unless the episode is entirely about the AI's incompetence — when in doubt, pick different slang.
+
+BEAT-3 HOUSE VOICE — hard rules: blunt and deadpan; under ~12 words or statement + ≤6-word tag; second person where it fits; no numbers/stats/news; sentence case, ends with a period, no em-dashes; never re-explain the term. Litmus: the line must survive next to "No more boobs." Live register examples:
+${voice}`,
+    { label: 'series:episodes', phase: 'Series', schema: EPISODE_SCHEMA }
+  )
+  episodes = (seriesResult && seriesResult.episodes) || []
+  log(`${episodes.length} series episodes drafted`)
+}
+
+return { weekLabel, minedCount: mined.length, freshCount: fresh.length, drafts, episodes }

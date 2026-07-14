@@ -19,6 +19,8 @@ The feed is the product; the site is the archive. See `docs/STRATEGY-PROMPT.md`.
      (`grep -o 'term: "[^"]*"' data/terms.js`) — dedup guard
    - `voiceSamples`: a handful of live `term → basically` lines
    - `pickCount`: 14 (two weeks of dailies) or 7
+   - `seriesCount`: "Teaching AI" episodes to draft (default 2; see `SERIES.md`)
+   - `usedSeriesTerms`: terms from the episode log in `SERIES.md` (dedup)
 3. **Punch-up pass (the human part, ~30 min):** open the generated
    `CANDIDATES-<date>.md`, pick the winner of each card's 3 options, sharpen.
    Your ear is the product — the pipeline only gets you to "good draft".
