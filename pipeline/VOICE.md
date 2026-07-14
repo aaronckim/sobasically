@@ -39,6 +39,20 @@ Kill it. (This is how the 2026-07-13 script draft failed: it added a narrator.)
 7. **Deadpan, not clever.** Say the scary thing like it's obvious. If it sounds
    like a newsletter being witty, cut it.
 
+## The Scribbler never contradicts the Dictionary
+
+The `basically` line is a COMPRESSION of the formal, never an inflation of it.
+The formal is the fact-check sitting on the same card — if the highlighter line
+overclaims, the card debunks itself and commenters will do it publicly. Vivid is
+allowed; false is not ("No more boobs" and "your brain is literally liquid
+cooled" are both 100% true). If the formal says "a quarter," the line cannot say
+"all" — aim the punch at whatever actually IS absolute instead.
+
+- ✗ Formal: "one-quarter of the world's seaborne petroleum" → basically: "The
+  world's oil has exactly one hallway." (contradiction — caught 2026-07-14)
+- ✓ "The Persian Gulf has exactly one door to the ocean." (the singular thing
+  that is actually singular)
+
 ## Register by surface
 
 - **`hot`:** dry, gossipy, one line, specific. "Half the internet is on it or

@@ -21,10 +21,12 @@ produce text card (X) + 15–30s short (TikTok), post 1/day. Winners graduate to
 
 **Formal:** The Strait of Hormuz is a narrow maritime passage connecting the Persian Gulf to the Gulf of Oman through which roughly one-quarter of the world's seaborne petroleum transits; a naval blockade is the stationing of warships to interdict commercial vessels attempting to enter or exit said passage.
 
-**Basically (pick one):**
-1. The world's oil has exactly one hallway. Someone just parked warships in it.
-2. A quarter of Earth's oil squeezes through one skinny strait. It's blocked.
-3. The planet's oil aisle. Currently closed.
+**Basically (pick one):** *(v3: fixed — options must compress the formal, not inflate it; the news lives in its own beat)*
+1. The Persian Gulf has exactly one door to the ocean.
+2. The only way to sail oil out of the Persian Gulf.
+3. The ocean's busiest oil hallway.
+
+**News beat (separate card in the video, not the definition):** Warships are parked in it right now. That's the gas price.
 
 **Best found in the wild:** “a 'chokepoint' is the ocean's version of the one hallway everyone in the building has to use” — Brookings (https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/)
 
