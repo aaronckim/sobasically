@@ -32,6 +32,21 @@ line is not.
 Put the line next to **"No more boobs."** on a highlighter strip.
 If it looks embarrassed to be there — too long, too eager, too clever — rewrite it.
 
+## When the peg is a death
+
+News-pegged medical terms will regularly involve a real person dying. Rules:
+
+1. **The person is never the punchline.** Their name appears once, factually, in the
+   caption or `hot` line — never in the joke, never in the hook.
+2. **Humor budget drops to ~zero; bluntness carries the card.** The stuffy-formal
+   register beat stays (that's a joke about doctors' language, not about the dead).
+   The `basically` line goes blunt-grave, not witty.
+3. **Only what's reported.** Say "preliminary finding" if that's what it is. No
+   speculation about their health, habits, or last hours.
+4. **End on the service beat.** The one warning sign or plain fact a viewer can
+   carry ("sudden tearing chest or back pain — call 911") is the payoff and the
+   taste. It's why the video deserves to exist.
+
 ## Anti-examples (real drafts that failed, 2026-07-13 run)
 
 - ✗ "one skinny stretch of water carries a quarter of Earth's oil — block it and
