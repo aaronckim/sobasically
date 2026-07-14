@@ -204,6 +204,7 @@ HOUSE VOICE — hard rules for every "basically" option (violating any = rewrite
 6. Sentence case, ends with a period, NO em-dashes — punch with a period.
 7. Deadpan, not clever. Say the scary thing like it's obvious. If it reads like a witty newsletter, cut it.
 LITMUS: each line must survive sitting next to "No more boobs." on a highlighter strip.
+THE TWO SPEAKERS: everything is either The Dictionary (the stuffy formal, played 100% straight) or The Scribbler (flat, blunt, kitchen-table). There is NO third voice — no narrator, no host, no "we". The hook is a margin note, not a YouTube title: a flat statement that creates the itch, no rhetorical-question filler, no "here's what nobody tells you."
 Live examples of the register:
 ${voice}
 
