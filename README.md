@@ -26,11 +26,15 @@ python3 -m http.server 8642
 
 ## Add a term
 
-Append to `data/terms.js`:
+Add a row to the content sheet, then regenerate:
 
-```js
-{ term: "Entropy", cat: "science",
-  formal: "The stuffy textbook version.",
-  basically: "The punchline.",
-  hot: "Optional: why it's trending right now." }
 ```
+node pipeline/sync-terms.js <sheet-export.csv>
+```
+
+`data/terms.js` is **generated** — don't hand-edit it. The sheet is the source of
+truth, so the person with the best ear doesn't need a terminal to use it. Only
+rows a human marked `approved` or `live` ship.
+
+See `pipeline/COLLABORATION.md` for the two-editor loop and
+`pipeline/VOICE-BRIEF.md` for the voice doc to paste into an AI assistant.

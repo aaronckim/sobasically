@@ -6,12 +6,19 @@ Urban Dictionary for complicated things: complex terms dumbed down to a sentence
 ## Stack
 
 Static site, **no build step**. `index.html` + `styles.css` + `app.js` + `data/terms.js`.
-Same pattern as dentwerks-site. Deploy target: Netlify (drag or CLI), not yet deployed.
+Same pattern as dentwerks-site. Deployed on Netlify.
+
+Content flows one way: **sheet → `sync-terms.js` → `data/terms.js` → commit → deploy.**
+Editing the sheet does not publish; the sync step is what reaches the site.
 
 ## Structure
 
 - `data/terms.js` — the entire content repository (`window.TERMS`), one object per term:
   `{ term, cat, formal, basically, hot? }`. Categories: `ai | medicine | science | finance | culture`.
+  **Generated — never hand-edit.** Source of truth is the shared content sheet;
+  regenerate with `node pipeline/sync-terms.js <csv>`. Two-editor workflow in
+  `pipeline/COLLABORATION.md`; portable voice doc for AI assistants in
+  `pipeline/VOICE-BRIEF.md`.
 - `app.js` — feed (daily deterministic hero pick + shuffled feed), substring search, category
   filter, a–z sort, copy/permalink per card. No dependencies.
 - `styles.css` — "defaced dictionary" look: Fraunces serif on warm paper, highlighter-yellow
