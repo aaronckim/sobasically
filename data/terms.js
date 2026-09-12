@@ -1,6 +1,9 @@
 // sobasically.com term repository
 // Each entry: term, cat (science|medicine|ai|finance|culture), formal (the complicated version),
 // basically (the dumbed-down version), hot (optional: why it has traction right now)
+//
+// GENERATED FILE — do not edit by hand.
+// Source of truth is the content sheet; regenerate with pipeline/sync-terms.js.
 window.TERMS = [
   // ————— MEDICINE —————
   { term: "Mastectomy", cat: "medicine",
