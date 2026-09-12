@@ -6,7 +6,10 @@ Urban Dictionary for complicated things: complex terms dumbed down to a sentence
 ## Stack
 
 Static site, **no build step**. `index.html` + `styles.css` + `app.js` + `data/terms.js`.
-Same pattern as dentwerks-site. Deploy target: Netlify (drag or CLI), not yet deployed.
+Same pattern as dentwerks-site. Deployed on Netlify.
+
+Content flows one way: **sheet → `sync-terms.js` → `data/terms.js` → commit → deploy.**
+Editing the sheet does not publish; the sync step is what reaches the site.
 
 ## Structure
 
