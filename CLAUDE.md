@@ -30,3 +30,13 @@ Same pattern as dentwerks-site. Deploy target: Netlify (drag or CLI), not yet de
 
 Preview: `python3 -m http.server` from repo root (see `.claude/launch.json`).
 Verify UI changes at mobile viewport (375px) with a screenshot — Aaron's standing convention.
+
+## Decided, do not reopen
+
+- Exactly two voices: the Dictionary and the Scribbler. No narrator, no third speaker (VOICE.md v2).
+- Compression, never inflation: the Scribbler may not contradict the Dictionary.
+- Static site, no build step. A framework is not on the table.
+
+## Session sign-off
+
+Global rules (`~/.claude/CLAUDE.md`) apply. End every session by committing, pushing, and reporting branch state without being asked. Term batches land in `data/terms.js` in the same session they are drafted.
